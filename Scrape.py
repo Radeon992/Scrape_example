@@ -5,6 +5,11 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
+# s = requests.session()
+# url = 'LOGIN_PAGE'
+# values = {'login':'YOURLOGIN','password':'YOURPASS'}
+# r = s.post(url, data=values, verify=False)
+
 pages = [str(i) for i in range(100,200)]
 for page in pages:
     html = requests.get('https://statesassembly.gov.je/Pages/Members.aspx?MemberID='+page).text
